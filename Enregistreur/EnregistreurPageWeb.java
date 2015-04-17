@@ -33,7 +33,7 @@ public void Enregistrer(String url,String name)
   }
   catch(IOException e)
   {
-
+     System.out.println("SITE IMPOSSIBRu");
   }
 
 }
@@ -43,8 +43,21 @@ public void Enregistrer(String url,String name)
     EnregistreurPageWeb gitreur = new EnregistreurPageWeb();
 
      if(args.length == 1)
+     {
        gitreur.Enregistrer(args[0],"Page.html");
+     }
+    else     
+    {
+       if(args.length == 2)
+       {
+        gitreur.Enregistrer(args[0],args[1]);
+       }
        else
-       gitreur.Enregistrer(args[0],args[1]);
-  }
+       {
+        System.out.println("1 or 2 parameters sti mautadine YOUR DURE DE COMPRENURE!");
+        
+       }
+     
+    }
+}
 }
